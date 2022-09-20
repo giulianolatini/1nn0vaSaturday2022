@@ -1,0 +1,5 @@
+{
+    "powershell.pester.useLegacyCodeLens": false,
+    "pester.runTestsInNewProcess": false,
+    "powershell.pester.codeLens": false
+}
