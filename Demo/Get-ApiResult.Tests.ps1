@@ -10,15 +10,6 @@ Describe 'Mocked Test' {
                             Content = $null
                          }
                         }
-        Mock -CommandName Invoke-RestMethod -ParameterFilter { $Method -eq 'POST' -and $Uri -eq 'https://www.google.com' } -MockWith { [PSCustomObject]@{ 
-                            StatusCode = 200
-                            StatusDescription = 'Ok'
-                            Content = [PSCustomObject]@{ 
-                                Message = 'Success'
-                                Version = '1.0'
-                            }
-                         }
-                        }
         Mock -CommandName Invoke-RestMethod -ParameterFilter { $Method -eq 'POST' -and $Uri -eq 'http://api.korg.org/test/pino' } -MockWith { [PSCustomObject]@{ 
                             StatusCode = 200
                             StatusDescription = 'Ok'
